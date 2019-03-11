@@ -1,0 +1,240 @@
+[
+  {
+    "img": {
+      "src": "img/earbuds_1.png",
+      "alt": "Skullcandy earbuds"
+    },
+    "color": {
+      "cName": "White",
+      "id": 1
+    },
+    "category": {
+      "name": "Earbuds",
+      "id": 1
+    },
+    "name": "SKULLCANDY JIB - S2DUYK",
+    "price": "$20",
+    "trending": true
+  },
+  {
+    "img": {
+      "src": "img/earbuds_2.png",
+      "alt": "JBL earbuds"
+    },
+    "color": {
+      "cName": "Black",
+      "id": 2
+    },
+    "category": {
+      "name": "Earbuds",
+      "id": 1
+    },
+    "name": "JBL Endurance Run",
+    "price": "$15",
+    "trending": false
+  },
+  {
+    "img": {
+      "src": "img/earbuds_3.png",
+      "alt": "Gembird earbuds"
+    },
+    "color": {
+      "cName": "Red",
+      "id": 3
+    },
+    "category": {
+      "name": "Earbuds",
+      "id": 1
+    },
+    "name": "GEMBIRD Porto MHS-EP",
+    "price": "$25",
+    "trending": true
+  },
+  {
+    "img": {
+      "src": "img/headphones_1.png",
+      "alt": "Altec headphones"
+    },
+    "color": {
+      "cName": "Black",
+      "id": 2
+    },
+    "category": {
+      "name": "Headphones",
+      "id": 2
+    },
+    "name": "ALTEC Lansing AL-CAQ",
+    "price": "$40",
+    "trending": false
+  },
+  {
+    "img": {
+      "src": "img/headphones_2.png",
+      "alt": "AKG headphones"
+    },
+    "color": {
+      "cName": "Black",
+      "id": 2
+    },
+    "category": {
+      "name": "Headphones",
+      "id": 2
+    },
+    "name": "AKG N90Q LE",
+    "price": "$245",
+    "trending": true
+  },
+  {
+    "img": {
+      "src": "img/headphones_3.png",
+      "alt": "SHURE headphones"
+    },
+    "color": {
+      "cName": "Gray",
+      "id": 3
+    },
+    "category": {
+      "name": "Headphones",
+      "id": 2
+    },
+    "name": "SHURE DJ 750E",
+    "price": "$420",
+    "trending": true
+  },
+  {
+    "img": {
+      "src": "img/btSpeaker_1.png",
+      "alt": "ALTEC speaker"
+    },
+    "color": {
+      "cName": "Gray",
+      "id": 3
+    },
+    "category": {
+      "name": "Bluetooth speaker",
+      "id": 3
+    },
+    "name": "ALTEC Legend Tower",
+    "price": "$260",
+    "trending": true
+  },
+  {
+    "img": {
+      "src": "img/btSpeaker_2.png",
+      "alt": "SAMSUNG speaker"
+    },
+    "color": {
+      "cName": "White",
+      "id": 1
+    },
+    "category": {
+      "name": "Bluetooth speaker",
+      "id": 3
+    },
+    "name": "SAMSUNG VL551",
+    "price": "$499",
+    "trending": false
+  },
+  {
+    "img": {
+      "src": "img/btSpeaker_3.png",
+      "alt": "SHURE headphones"
+    },
+    "color": {
+      "cName": "Black",
+      "id": 3
+    },
+    "category": {
+      "name": "Headphones",
+      "id": 2
+    },
+    "name": "BOSE Revolve+",
+    "price": "$355",
+    "trending": false
+  },
+  {
+    "img": {
+      "src": "img/btSpeaker_4.png",
+      "alt": "YAMAHA speaker"
+    },
+    "color": {
+      "cName": "Black",
+      "id": 2
+    },
+    "category": {
+      "name": "Bluetooth speaker",
+      "id": 3
+    },
+    "name": "YAMAHA PDX-B11",
+    "price": "$185",
+    "trending": true
+  },
+  {
+    "img": {
+      "src": "img/accesory_1.png",
+      "alt": "Pop filter"
+    },
+    "color": {
+      "cName": "Black",
+      "id": 2
+    },
+    "category": {
+      "name": "Accesories",
+      "id": 4
+    },
+    "name": "PROEL APOP50",
+    "price": "$27",
+    "trending": true
+  },
+  {
+    "img": {
+      "src": "img/accesory_2.png",
+      "alt": "Microphone holder"
+    },
+    "color": {
+      "cName": "White",
+      "id": 1
+    },
+    "category": {
+      "name": "Accesories",
+      "id": 4
+    },
+    "name": "ISK SHM-7A",
+    "price": "$33",
+    "trending": false
+  },
+  {
+    "img": {
+      "src": "img/accesory_3.png",
+      "alt": "Microphone holder"
+    },
+    "color": {
+      "cName": "Black",
+      "id": 2
+    },
+    "category": {
+      "name": "Accesories",
+      "id": 4
+    },
+    "name": "WAKERTONE Mic Stand",
+    "price": "$29",
+    "trending": false
+  },
+  {
+    "img": {
+      "src": "img/mic_1.png",
+      "alt": "ISK Microphone"
+    },
+    "color": {
+      "cName": "White",
+      "id": 1
+    },
+    "category": {
+      "name": "Microphones",
+      "id": 3
+    },
+    "name": "ISK Studio Mic",
+    "price": "$99",
+    "trending": true
+  }
+]

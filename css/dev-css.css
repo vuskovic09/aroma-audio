@@ -1,0 +1,11 @@
+.nav-shop li i{
+  font-size: 32px;
+}
+
+.nav-shop li button .nav-shop__circle {
+  font-size: 12px;
+}
+
+.card-product__imgOverlay li button i, .card-product__imgOverlay li button span {
+  font-size: 28px;
+}
