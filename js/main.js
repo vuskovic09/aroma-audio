@@ -35,6 +35,7 @@ $(document).ready(function() {
       console.log("error");
     }
   });
+
 });
 
 function writeTrending(products){

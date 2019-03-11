@@ -9,3 +9,7 @@
 .card-product__imgOverlay li button i, .card-product__imgOverlay li button span {
   font-size: 28px;
 }
+
+.hero-banner {
+  padding-bottom: 60px;
+}

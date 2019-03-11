@@ -248,10 +248,27 @@
     },
     "category": {
       "name": "Microphones",
-      "id": 3
+      "id": 5
     },
     "name": "ISK Studio Mic",
     "price": "$99",
     "trending": true
+  },
+  {
+    "img": {
+      "src": "img/mic_2.png",
+      "alt": "SHURE Condenser Microphone"
+    },
+    "color": {
+      "cName": "Gray",
+      "id": 3
+    },
+    "category": {
+      "name": "Microphones",
+      "id": 5
+    },
+    "name": "SHURE Condenser Mic",
+    "price": "$139",
+    "trending": false
   }
 ]

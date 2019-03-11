@@ -1,0 +1,22 @@
+[
+  {
+    "ctID": 1,
+    "ctName": "Earbuds"
+  },
+  {
+    "ctID": 2,
+    "ctName": "Headphones"
+  },
+  {
+    "ctID": 3,
+    "ctName": "Speakers"
+  },
+  {
+    "ctID": 4,
+    "ctName": "Accesories"
+  },
+  {
+    "ctID": 5,
+    "ctName": "Microphones"
+  },
+]
