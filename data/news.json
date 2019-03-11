@@ -1,0 +1,32 @@
+[
+  {
+    "author": "Admin",
+    "commentNo": 4,
+    "title": "Book our studio for a recording session",
+    "content": "Open 7 days a week, 8AM-8PM, come book an appointment and record with our equipment!",
+    "img": {
+      "src": "img/news_1.jpg",
+      "alt": "Studio recording session"
+    }
+  },
+  {
+    "author": "Moderator",
+    "commentNo": 2,
+    "title": "Our new studio",
+    "content": "In two weeks, a new studio location will open. It will specialize in vocal recording as well as radio broadcasting.",
+    "img": {
+      "src": "img/news_2.jpg",
+      "alt": "New location"
+    }
+  },
+  {
+    "author": "Admin",
+    "commentNo": 10,
+    "title": "Promo recording session",
+    "content": "In April 2019, all recording sessions will be 25% off! Use your chance and book now!",
+    "img": {
+      "src": "img/news_3.jpg",
+      "alt": "Recording promotion"
+    }
+  }
+]

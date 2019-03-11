@@ -99,6 +99,23 @@
     },
     "name": "SHURE DJ 750E",
     "price": "$420",
+    "trending": false
+  },
+  {
+    "img": {
+      "src": "img/headphones_4.png",
+      "alt": "Marshall headphones"
+    },
+    "color": {
+      "cName": "Black",
+      "id": 2
+    },
+    "category": {
+      "name": "Headphones",
+      "id": 2
+    },
+    "name": "Marshall Major II",
+    "price": "$119",
     "trending": true
   },
   {
@@ -138,15 +155,15 @@
   {
     "img": {
       "src": "img/btSpeaker_3.png",
-      "alt": "SHURE headphones"
+      "alt": "BOSE speaker"
     },
     "color": {
       "cName": "Black",
       "id": 3
     },
     "category": {
-      "name": "Headphones",
-      "id": 2
+      "name": "Bluetooth speaker",
+      "id": 3
     },
     "name": "BOSE Revolve+",
     "price": "$355",
