@@ -13,3 +13,7 @@
 .hero-banner {
   padding-bottom: 60px;
 }
+
+.sidebar {
+  touch-action: none;
+}
