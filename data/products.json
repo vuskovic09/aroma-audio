@@ -4,10 +4,16 @@
       "src": "img/earbuds_1.png",
       "alt": "Skullcandy earbuds"
     },
-    "color": {
-      "cName": "White",
-      "id": 1
-    },
+    "color": [
+      {
+        "cName": "Black",
+        "id": 2
+      },
+      {
+        "cName": "White",
+        "id": 1
+      }
+    ],
     "category": {
       "name": "Earbuds",
       "id": 1
@@ -21,10 +27,16 @@
       "src": "img/earbuds_2.png",
       "alt": "JBL earbuds"
     },
-    "color": {
-      "cName": "Black",
-      "id": 2
-    },
+    "color": [
+      {
+        "cName": "Black",
+        "id": 2
+      },
+      {
+        "cName": "Gray",
+        "id": 4
+      }
+    ],
     "category": {
       "name": "Earbuds",
       "id": 1
@@ -38,10 +50,16 @@
       "src": "img/earbuds_3.png",
       "alt": "Gembird earbuds"
     },
-    "color": {
-      "cName": "Red",
-      "id": 3
-    },
+    "color": [
+      {
+        "cName": "Black",
+        "id": 2
+      },
+      {
+        "cName": "Red",
+        "id": 3
+      }
+    ],
     "category": {
       "name": "Earbuds",
       "id": 1
@@ -55,10 +73,16 @@
       "src": "img/headphones_1.png",
       "alt": "Altec headphones"
     },
-    "color": {
-      "cName": "Black",
-      "id": 2
-    },
+    "color": [
+      {
+        "cName": "Red",
+        "id": 3
+      },
+      {
+        "cName": "White",
+        "id": 1
+      }
+    ],
     "category": {
       "name": "Headphones",
       "id": 2
@@ -72,10 +96,16 @@
       "src": "img/headphones_2.png",
       "alt": "AKG headphones"
     },
-    "color": {
-      "cName": "Black",
-      "id": 2
-    },
+    "color": [
+      {
+        "cName": "Black",
+        "id": 2
+      },
+      {
+        "cName": "Red",
+        "id": 3
+      }
+    ],
     "category": {
       "name": "Headphones",
       "id": 2
@@ -89,10 +119,16 @@
       "src": "img/headphones_3.png",
       "alt": "SHURE headphones"
     },
-    "color": {
-      "cName": "Gray",
-      "id": 3
-    },
+    "color": [
+      {
+        "cName": "Gray",
+        "id": 4
+      },
+      {
+        "cName": "Red",
+        "id": 3
+      }
+    ],
     "category": {
       "name": "Headphones",
       "id": 2
@@ -106,10 +142,16 @@
       "src": "img/headphones_4.png",
       "alt": "Marshall headphones"
     },
-    "color": {
-      "cName": "Black",
-      "id": 2
-    },
+    "color": [
+      {
+        "cName": "Black",
+        "id": 2
+      },
+      {
+        "cName": "Brown",
+        "id": 5
+      }
+    ],
     "category": {
       "name": "Headphones",
       "id": 2
@@ -123,10 +165,16 @@
       "src": "img/btSpeaker_1.png",
       "alt": "ALTEC speaker"
     },
-    "color": {
-      "cName": "Gray",
-      "id": 3
-    },
+    "color": [
+      {
+        "cName": "Black",
+        "id": 2
+      },
+      {
+        "cName": "Gray",
+        "id": 4
+      }
+    ],
     "category": {
       "name": "Bluetooth speaker",
       "id": 3
@@ -140,10 +188,16 @@
       "src": "img/btSpeaker_2.png",
       "alt": "SAMSUNG speaker"
     },
-    "color": {
-      "cName": "White",
-      "id": 1
-    },
+    "color": [
+      {
+        "cName": "Red",
+        "id": 3
+      },
+      {
+        "cName": "White",
+        "id": 1
+      }
+    ],
     "category": {
       "name": "Bluetooth speaker",
       "id": 3
@@ -157,10 +211,16 @@
       "src": "img/btSpeaker_3.png",
       "alt": "BOSE speaker"
     },
-    "color": {
-      "cName": "Black",
-      "id": 3
-    },
+    "color": [
+      {
+        "cName": "Black",
+        "id": 2
+      },
+      {
+        "cName": "Yellow",
+        "id": 6
+      }
+    ],
     "category": {
       "name": "Bluetooth speaker",
       "id": 3
@@ -174,10 +234,20 @@
       "src": "img/btSpeaker_4.png",
       "alt": "YAMAHA speaker"
     },
-    "color": {
-      "cName": "Black",
-      "id": 2
-    },
+    "color": [
+      {
+        "cName": "Black",
+        "id": 2
+      },
+      {
+        "cName": "Red",
+        "id": 3
+      },
+      {
+        "cName": "Yellow",
+        "id": 6
+      }
+    ],
     "category": {
       "name": "Bluetooth speaker",
       "id": 3
@@ -191,10 +261,12 @@
       "src": "img/accesory_1.png",
       "alt": "Pop filter"
     },
-    "color": {
-      "cName": "Black",
-      "id": 2
-    },
+    "color": [
+      {
+        "cName": "Black",
+        "id": 2
+      }
+    ],
     "category": {
       "name": "Accesories",
       "id": 4
@@ -208,10 +280,20 @@
       "src": "img/accesory_2.png",
       "alt": "Microphone holder"
     },
-    "color": {
-      "cName": "White",
-      "id": 1
-    },
+    "color": [
+      {
+        "cName": "White",
+        "id": 1
+      },
+      {
+        "cName": "Brown",
+        "id": 5
+      },
+      {
+        "cName": "Yellow",
+        "id": 6
+      }
+    ],
     "category": {
       "name": "Accesories",
       "id": 4
@@ -225,10 +307,20 @@
       "src": "img/accesory_3.png",
       "alt": "Microphone holder"
     },
-    "color": {
-      "cName": "Black",
-      "id": 2
-    },
+    "color": [
+      {
+        "cName": "Black",
+        "id": 2
+      },
+      {
+        "cName": "Brown",
+        "id": 5
+      },
+      {
+        "cName": "Yellow",
+        "id": 6
+      }
+    ],
     "category": {
       "name": "Accesories",
       "id": 4
@@ -242,10 +334,12 @@
       "src": "img/mic_1.png",
       "alt": "ISK Microphone"
     },
-    "color": {
+    "color": [
+      {
       "cName": "White",
       "id": 1
-    },
+      }
+    ],
     "category": {
       "name": "Microphones",
       "id": 5
@@ -259,10 +353,12 @@
       "src": "img/mic_2.png",
       "alt": "SHURE Condenser Microphone"
     },
-    "color": {
+    "color": [
+      {
       "cName": "Gray",
-      "id": 3
-    },
+      "id": 4
+      }
+    ],
     "category": {
       "name": "Microphones",
       "id": 5

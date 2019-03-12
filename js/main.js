@@ -36,8 +36,8 @@ $(document).ready(function() {
     }
   });
 
-});
 
+});
 
 function writeTrending(products){
   let html = "";
@@ -100,6 +100,7 @@ function writeOneProduct(product){
             </div>
           </div>`;
 }
+
 
 $(function() {
   "use strict";

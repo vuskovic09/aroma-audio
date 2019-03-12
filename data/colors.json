@@ -1,0 +1,26 @@
+[
+  {
+    "cName": "White",
+    "cID": 1
+  },
+  {
+    "cName": "Black",
+    "cID": 2
+  },
+  {
+    "cName": "Red",
+    "cID": 3
+  },
+  {
+    "cName": "Gray",
+    "cID": 4
+  },
+  {
+    "cName": "Brown",
+    "cID": 5
+  },
+  {
+    "cName": "Yellow",
+    "cID": 6
+  }
+]
