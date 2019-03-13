@@ -3,7 +3,6 @@ $(document).ready(function(){
   showNews();
   showProducts();
   showCategories();
-  showColors();
   var itemNo = localStorage.getItem('cart');
   $('.cart-icon').html(itemNo);
 });
@@ -34,10 +33,7 @@ function printTrending(products){
 
 function showProducts() {
   ajaxProducts(function(products){
-    // sortFilterByRemembered(products);
     printProducts(products);
-
-    showColors(products);
   });
 }
 
@@ -134,11 +130,14 @@ function printOneCategory(category, productNumber){
 
 function onFilterByCategory(){
   let ctID = $(this).data('id');
-
-  ajaxProducts(function(products){
-    products = filterByCategory(products, ctID);
-    printProducts(products);
-  });
+  if($(this).data('id') == 1){
+    showProducts();
+  } else {
+    ajaxProducts(function(products){
+      products = filterByCategory(products, ctID);
+      printProducts(products);
+    });
+  }
 }
 
 function filterByCategory(products, ctID){
@@ -146,56 +145,56 @@ function filterByCategory(products, ctID){
 }
 
 //COLORS => NE RADI SORTIRANJE
-function showColors(){
-  $.ajax({
-    url: "data/colors.json",
-    method: "GET",
-    success: function(colors){
-      printColors(colors);
-    }
-  });
-}
-
-function printColors(colors){
-  let html = "";
-  for(let color of colors){
-    html += printOneColor(color);
-  }
-  $('.colors').html(html);
-  $('.color-filter').change(onFilterByColor);
-}
-
-function printOneColor(color){
-  return `<li class="filter-list"><input class="pixel-radio color-filter" type="radio" data-id="${color.cID}" name="color"><label>${color.cName}</label></li>`;
-}
-
-function onFilterByColor(){
-  console.log(1);
-  let colorUnique = [];
-  let cID = $(this).data('id');
-
-  if(isUniqueColor(colorUnique, cID)){
-    colorUnique.push(cID);
-  }
-  console.log(colorUnique);
-  ajaxProducts(function(products){
-    products = filterByColor(products, cID);
-    printProducts(products);
-  });
-}
-
-function isUniqueColor(colorUnique, cID){
-    let isUnique = false;
-    if(colorUnique.length > 0){
-        let colorUniqueID = colorUnique.map(x => x.id);
-        if(!inArray(colorUniqueID, cID.id)){
-            isUnique = true;
-        }
-    } else {
-        isUnique = true;
-    }
-    return isUnique;
-}
+// function showColors(){
+//   $.ajax({
+//     url: "data/colors.json",
+//     method: "GET",
+//     success: function(colors){
+//       printColors(colors);
+//     }
+//   });
+// }
+//
+// function printColors(colors){
+//   let html = "";
+//   for(let color of colors){
+//     html += printOneColor(color);
+//   }
+//   $('.colors').html(html);
+//   $('.color-filter').change(onFilterByColor);
+// }
+//
+// function printOneColor(color){
+//   return `<li class="filter-list"><input class="pixel-radio color-filter" type="radio" data-id="${color.cID}" name="color"><label>${color.cName}</label></li>`;
+// }
+//
+// function onFilterByColor(){
+//   console.log(1);
+//   let colorUnique = [];
+//   let cID = $(this).data('id');
+//
+//   if(isUniqueColor(colorUnique, cID)){
+//     colorUnique.push(cID);
+//   }
+//   console.log(colorUnique);
+//   ajaxProducts(function(products){
+//     products = filterByColor(products, cID);
+//     printProducts(products);
+//   });
+// }
+//
+// function isUniqueColor(colorUnique, cID){
+//     let isUnique = false;
+//     if(colorUnique.length > 0){
+//         let colorUniqueID = colorUnique.map(x => x.id);
+//         if(!inArray(colorUniqueID, cID.id)){
+//             isUnique = true;
+//         }
+//     } else {
+//         isUnique = true;
+//     }
+//     return isUnique;
+// }
 //
 // function filterByColor(products, cID){
 //     return products.filter(x => x.color.id == cID);
@@ -205,61 +204,61 @@ function isUniqueColor(colorUnique, cID){
 // SORTING PRODUCTS
 
 // SHOPPING CART - ADD
-  var cartValue = -0;
-  function addToCart(product){
-  cartValue += 1;
-  localStorage.setItem('cart', cartValue);
-  event.preventDefault(product);
-  $('.notify').fadeIn(1000).fadeOut(1500);
-  $('.cart-icon').html(cartValue)
-  let id = $(this).data('id');
-  var products = productsInCart();
+var cartValue = -0;
+function addToCart(product){
+cartValue += 1;
+localStorage.setItem('cart', cartValue);
+event.preventDefault(product);
+$('.notify').fadeIn(1000).fadeOut(1500);
+$('.cart-icon').html(cartValue)
+let id = $(this).data('id');
+var products = productsInCart();
 
-  if(products) {
-    if(productInCart()) {
-      updateQuantity();
-    } else {
-      addToLocal();
-    }
+if(products) {
+  if(productInCart()) {
+    updateQuantity();
   } else {
-    addFirstToLocal();
+    addToLocal();
   }
-  function productInCart(){
-    return products.filter(p => p.id == id).length;
-  }
+} else {
+  addFirstToLocal();
+}
+function productInCart(){
+  return products.filter(p => p.id == id).length;
+}
 
-  function addToLocal(){
-    let products = productsInCart();
-    products.push({
-      id: id,
-      quantity: 1
-    });
-    localStorage.setItem('products', JSON.stringify(products));
-  }
+function addToLocal(){
+  let products = productsInCart();
+  products.push({
+    id: id,
+    quantity: 1
+  });
+  localStorage.setItem('products', JSON.stringify(products));
+}
 
-  function updateQuantity(){
-    let products = productsInCart();
-    for(let i in products){
-      if(products[i].id == id){
-        products[i].quantity++;
-        break;
-      }
+function updateQuantity(){
+  let products = productsInCart();
+  for(let i in products){
+    if(products[i].id == id){
+      products[i].quantity++;
+      break;
     }
-    localStorage.setItem('products', JSON.stringify(products));
   }
+  localStorage.setItem('products', JSON.stringify(products));
+}
 
-  function productsInCart() {
-    return JSON.parse(localStorage.getItem("products"));
-  }
+function productsInCart() {
+  return JSON.parse(localStorage.getItem("products"));
+}
 
-  function addFirstToLocal() {
-    let products = [];
-    products[0] = {
-      id: id,
-      quantity: 1
-    };
-    localStorage.setItem('products', JSON.stringify(products));
-  }
+function addFirstToLocal() {
+  let products = [];
+  products[0] = {
+    id: id,
+    quantity: 1
+  };
+  localStorage.setItem('products', JSON.stringify(products));
+}
 }
 
 function clearCart() {
