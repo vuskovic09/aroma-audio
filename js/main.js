@@ -47,6 +47,8 @@ function printProducts(products){
     html += printOneProduct(product);
   }
   $('.products').html(html);
+
+  $('.addToCart').click(addToCart);
 }
 
 function printOneProduct(product){
@@ -55,7 +57,7 @@ function printOneProduct(product){
               <div class="card-product__img">
                 <img class="card-img" src="${product.img.src}" alt="${product.img.alt}">
                 <ul class="card-product__imgOverlay">
-                  <li><a href="#"><button><i class="ti-shopping-cart"></i></button></a></li>
+                  <li><a class="addToCart" data-id="${product.id}" href="#"><button><i class="ti-shopping-cart"></i></button></a></li>
                 </ul>
               </div>
               <div class="card-body">
@@ -168,23 +170,96 @@ function printOneColor(color){
 
 function onFilterByColor(){
   console.log(1);
+  let colorUnique = [];
   let cID = $(this).data('id');
 
+  if(isUniqueColor(colorUnique, cID)){
+    colorUnique.push(cID);
+  }
+  console.log(colorUnique);
   ajaxProducts(function(products){
     products = filterByColor(products, cID);
     printProducts(products);
   });
 }
 
-function filterByColor(products, cID){
-    return products.filter(x => x.color.id == cID);
-    return inArray(id, cID);
+function isUniqueColor(colorUnique, cID){
+    let isUnique = false;
+    if(colorUnique.length > 0){
+        let colorUniqueID = colorUnique.map(x => x.id);
+        if(!inArray(colorUniqueID, cID.id)){
+            isUnique = true;
+        }
+    } else {
+        isUnique = true;
+    }
+    return isUnique;
 }
+//
+// function filterByColor(products, cID){
+//     return products.filter(x => x.color.id == cID);
+//     return inArray(id, cID);
+// }
 
 // SORTING PRODUCTS
 
 // SHOPPING CART - ADD
+function addToCart(product){
+  event.preventDefault(product);
 
+  let id = $(this).data('id');
+  var products = productsInCart();
+
+  if(products) {
+    if(productInCart()) {
+      updateQuantity();
+    } else {
+      addToLocal();
+    }
+  } else {
+    addFirstToLocal();
+  }
+  function productInCart(){
+    return products.filter(p => p.id == id).length;
+  }
+
+  function addToLocal(){
+    let products = productsInCart();
+    products.push({
+      id: id,
+      quantity: 1
+    });
+    localStorage.setItem('products', JSON.stringify(products));
+  }
+
+  function updateQuantity(){
+    let products = productsInCart();
+    for(let i in products){
+      if(products[i].id == id){
+        products[i].quantity++;
+        break;
+      }
+    }
+    localStorage.setItem('products', JSON.stringify(products));
+  }
+
+  function productsInCart() {
+    return JSON.parse(localStorage.getItem("products"));
+  }
+
+  function addFirstToLocal() {
+    let products = [];
+    products[0] = {
+      id: id,
+      quantity: 1
+    };
+    localStorage.setItem('products', JSON.stringify(products));
+  }
+}
+
+function clearCart() {
+  localStorage.removeItem('products');
+}
 
 // HELPER FUNCTIONS
 function inArray(array, element){
@@ -202,6 +277,11 @@ function setStorage(value){
 function emptyStorage(){
   return localStorage.getItem('sort') == null;
 }
+
+
+
+
+
 
 
 // TEMPLATE JS
