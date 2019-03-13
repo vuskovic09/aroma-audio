@@ -102,7 +102,7 @@ function generateTable(products) {
 }
 
 function showEmptyCart() {
-    $("#tableContent").html("<h1>Your cart is empty!</h1>")
+    $("#tableContent").html("<h2>Your cart is empty!</h2>")
 }
 
 function productsInCart() {
