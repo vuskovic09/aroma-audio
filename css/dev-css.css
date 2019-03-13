@@ -23,5 +23,27 @@
 }
 
 .card-blog__title {
-  color: #007bff;
+  color: #384aeb;
+}
+
+#author {
+  padding: 150px;
+}
+
+#author img {
+  max-width: 100%;
+}
+
+#author p {
+  padding: 25% 0;
+  text-align: left;
+  font-size: 24px;
+}
+
+.notify {
+  display: none;
+}
+
+.nav-shop li i, .nav-shop li span {
+  color: #384aeb;
 }

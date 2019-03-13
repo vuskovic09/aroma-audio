@@ -4,9 +4,9 @@ $(document).ready(function(){
   showProducts();
   showCategories();
   showColors();
-
+  var itemNo = localStorage.getItem('cart');
+  $('.cart-icon').html(itemNo);
 });
-
 // PRODUCTS
 function ajaxProducts(callbackSuccess){
   $.ajax({
@@ -58,6 +58,7 @@ function printOneProduct(product){
                 <img class="card-img" src="${product.img.src}" alt="${product.img.alt}">
                 <ul class="card-product__imgOverlay">
                   <li><a class="addToCart" data-id="${product.id}" href="#"><button><i class="ti-shopping-cart"></i></button></a></li>
+                  <li><p class="notify">Item added to cart</p></li>
                 </ul>
               </div>
               <div class="card-body">
@@ -204,9 +205,13 @@ function isUniqueColor(colorUnique, cID){
 // SORTING PRODUCTS
 
 // SHOPPING CART - ADD
-function addToCart(product){
+  var cartValue = -0;
+  function addToCart(product){
+  cartValue += 1;
+  localStorage.setItem('cart', cartValue);
   event.preventDefault(product);
-
+  $('.notify').fadeIn(1000).fadeOut(1500);
+  $('.cart-icon').html(cartValue)
   let id = $(this).data('id');
   var products = productsInCart();
 
