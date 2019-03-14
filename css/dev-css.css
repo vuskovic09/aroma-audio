@@ -47,3 +47,14 @@
 .nav-shop li i, .nav-shop li span {
   color: #384aeb;
 }
+
+.btn-secondary {
+  margin-top: 10px;
+  background-color: #384aeb;
+  border: none;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+  background-color: #384aeb;
+  border: none;
+}

@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta name="keywords" content="knjige, knjizara, izdavaci, autoru" />
+	<meta name="description" content="Best stocked audio store in the world!" />
+	<meta name="author" content="mailto:filip.vuskovic09@gmail.com" />
+	<meta name="copyright" content="Aroma audio" />
+	<meta name="language" content="english" />
+	<meta name="robots" content="follow, index" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Aroma Shop - Category</title>
@@ -38,7 +44,7 @@
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                   aria-expanded="false">Shop</a>
                 <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="category.html">All products</a></li>
+                  <li class="nav-item"><a class="nav-link" href="shop.html">All products</a></li>
                   <li class="nav-item"><a class="nav-link" href="cart.html">Shopping Cart</a></li>
                 </ul>
 							</li>
@@ -94,13 +100,17 @@
         <div class="col-xl-9 col-lg-8 col-md-7">
           <!-- Start Filter Bar -->
           <div class="filter-bar d-flex flex-wrap align-items-center">
-            <div class="sorting">
-              <select>
-                <option value="0">Sort...</option>
-                <option value="1">Name A-Z</option>
-                <option value="1">Name Z-A</option>
-              </select>
-            </div>
+            <div class="btn-group dropdown mr-1 ml-md-auto">
+                <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" id="dropdownMenuReference" data-toggle="dropdown">Sort</button>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+                    <a class="dropdown-item sort-element" href="#" data-sortby="name" data-order="asc">Name, A to Z</a>
+                    <a class="dropdown-item sort-element" href="#" data-sortby="name" data-order="desc">Name, Z to A</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item sort-element" href="#" data-sortby="price" data-order="asc">Price, low to high</a>
+                    <a class="dropdown-item sort-element" href="#" data-sortby="price" data-order="desc">Price, high to low</a>
+                </div>
+              </div>
           </div>
           <!-- End Filter Bar -->
           <!-- Start Best Seller -->
@@ -160,8 +170,8 @@
             <div class="single-footer-widget tp_widgets">
               <h4 class="footer_title">Quick Links</h4>
               <ul class="list">
-                <li><a href="#">Home</a></li>
-                <li><a href="categories.html">Shop</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="oAutoru.html">O autoru</a></li>
                 <li><a href="Dokumentacija.pdf">Dokumentacija</a></li>

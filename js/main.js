@@ -5,7 +5,12 @@ $(document).ready(function(){
   showCategories();
   var itemNo = localStorage.getItem('cart');
   $('.cart-icon').html(itemNo);
+
+  $('.sort-element').click(function(){
+    onSortProducts.call(this);
+  });
 });
+
 // PRODUCTS
 function ajaxProducts(callbackSuccess){
   $.ajax({
@@ -60,7 +65,7 @@ function printOneProduct(product){
               <div class="card-body">
                 <p>${product.category.name}</p>
                 <h4 class="card-product__title"><a href="single-product.html">${product.name}</a></h4>
-                <p class="card-product__price">${product.price}</p>
+                <p class="card-product__price">$${product.price}</p>
               </div>
             </div>
           </div>`;
@@ -144,87 +149,55 @@ function filterByCategory(products, ctID){
   return products.filter(x => x.category.id == ctID);
 }
 
-//COLORS => NE RADI SORTIRANJE
-// function showColors(){
-//   $.ajax({
-//     url: "data/colors.json",
-//     method: "GET",
-//     success: function(colors){
-//       printColors(colors);
-//     }
-//   });
-// }
-//
-// function printColors(colors){
-//   let html = "";
-//   for(let color of colors){
-//     html += printOneColor(color);
-//   }
-//   $('.colors').html(html);
-//   $('.color-filter').change(onFilterByColor);
-// }
-//
-// function printOneColor(color){
-//   return `<li class="filter-list"><input class="pixel-radio color-filter" type="radio" data-id="${color.cID}" name="color"><label>${color.cName}</label></li>`;
-// }
-//
-// function onFilterByColor(){
-//   console.log(1);
-//   let colorUnique = [];
-//   let cID = $(this).data('id');
-//
-//   if(isUniqueColor(colorUnique, cID)){
-//     colorUnique.push(cID);
-//   }
-//   console.log(colorUnique);
-//   ajaxProducts(function(products){
-//     products = filterByColor(products, cID);
-//     printProducts(products);
-//   });
-// }
-//
-// function isUniqueColor(colorUnique, cID){
-//     let isUnique = false;
-//     if(colorUnique.length > 0){
-//         let colorUniqueID = colorUnique.map(x => x.id);
-//         if(!inArray(colorUniqueID, cID.id)){
-//             isUnique = true;
-//         }
-//     } else {
-//         isUnique = true;
-//     }
-//     return isUnique;
-// }
-//
-// function filterByColor(products, cID){
-//     return products.filter(x => x.color.id == cID);
-//     return inArray(id, cID);
-// }
-
 // SORTING PRODUCTS
+function onSortProducts(){
+    let sortBy = $(this).data('sortby');
+    let order = $(this).data('order');
+    console.log(sortBy + "=" + order);
+
+    ajaxProducts(function(products){
+        sortProducts(products, sortBy, order);
+        printProducts(products);
+    });
+}
+
+
+function sortProducts(products, sortBy, order) {
+    products.sort(function(a,b){
+        let valueA = (sortBy=='name')? a.price : a.name;
+        let valueB = (sortBy=='price')? b.price : b.name;
+        if(valueA > valueB)
+            return order=='asc' ? 1 : -1;
+        else if(valueA < valueB)
+            return order=='asc' ? -1 : 1;
+        else
+            return 0;
+    });
+}
+
 
 // SHOPPING CART - ADD
 var cartValue = -0;
 function addToCart(product){
-cartValue += 1;
-localStorage.setItem('cart', cartValue);
-event.preventDefault(product);
-$('.notify').fadeIn(1000).fadeOut(1500);
-$('.cart-icon').html(cartValue)
-let id = $(this).data('id');
-var products = productsInCart();
+  cartValue += 1;
+  localStorage.setItem('cart', cartValue);
+  event.preventDefault(product);
+  $('.notify').fadeIn(1000).fadeOut(1500);
+  $('.cart-icon').html(cartValue)
+  let id = $(this).data('id');
+  var products = productsInCart();
 
-if(products) {
-  if(productInCart()) {
-    updateQuantity();
+  if(products) {
+    if(productInCart()) {
+      updateQuantity();
+    } else {
+      addToLocal();
+    }
   } else {
-    addToLocal();
+    addFirstToLocal();
   }
-} else {
-  addFirstToLocal();
-}
-function productInCart(){
-  return products.filter(p => p.id == id).length;
+  function productInCart(){
+    return products.filter(p => p.id == id).length;
 }
 
 function addToLocal(){

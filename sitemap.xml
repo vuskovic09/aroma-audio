@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://librobookstore.000webhostapp.com/</loc>
-    <lastmod>2019-01-27</lastmod>
-    <priority>1.00</priority>
+    <loc>http://aroma-audio.000webhostapp.com/</loc>
+    <lastmod>2019-02-27</lastmod>
+    <priority>0.80</priority>
+    <changefreq>Monthly</changefreq>
   </url>
   <url>
-    <loc>http://librobookstore.000webhostapp.com/index.html</loc>
-    <lastmod>2019-01-27</lastmod>
-    <priority>0.80</priority>
+    <loc>http://aroma-audio.000webhostapp.com/shop.html</loc>
+    <lastmod>2019-02-27</lastmod>
+    <priority>0.90</priority>
+    <changefreq>Weekly</changefreq>
   </url>
   <url>
-    <loc>http://librobookstore.000webhostapp.com/shop.html</loc>
-    <lastmod>2019-01-27</lastmod>
-    <priority>0.80</priority>
+    <loc>http://aroma-audio.000webhostapp.com/cart.html</loc>
+    <lastmod>2019-02-27</lastmod>
+    <priority>0.40</priority>
+    <changefreq>Yearly</changefreq>
   </url>
   <url>
-    <loc>http://librobookstore.000webhostapp.com/contact.html</loc>
-    <lastmod>2019-01-27</lastmod>
-    <priority>0.80</priority>
+    <loc>http://aroma-audio.000webhostapp.com/login.html</loc>
+    <lastmod>2019-03-03</lastmod>
+    <priority>0.50</priority>
+    <changefreq>Yearly</changefreq>
   </url>
   <url>
-    <loc>http://librobookstore.000webhostapp.com/oAutoru.html</loc>
-    <lastmod>2019-01-27</lastmod>
-    <priority>0.80</priority>
+    <loc>http://aroma-audio.000webhostapp.com/register.html</loc>
+    <lastmod>2019-03-03</lastmod>
+    <priority>0.50</priority>
+    <changefreq>Yearly</changefreq>
+  </url>
+  <url>
+    <loc>http://aroma-audio.000webhostapp.com/oAutoru.html</loc>
+    <lastmod>2019-03-05</lastmod>
+    <priority>0.20</priority>
+    <changefreq>Yearly</changefreq>
   </url>
 </urlset>
