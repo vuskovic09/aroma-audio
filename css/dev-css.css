@@ -58,3 +58,9 @@
   background-color: #384aeb;
   border: none;
 }
+
+.error-mail, .error-pass, .error-pass-match {
+  position: absolute;
+  font-size: 15px;
+  color: #384aeb;
+}

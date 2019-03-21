@@ -103,12 +103,15 @@
 							</div>
 							<div class="col-md-12 form-group">
 								<input type="text" class="form-control" id="email" name="email" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'">
+                <p class="error-mail">E-mail is in an incorrect format</p>
               </div>
               <div class="col-md-12 form-group">
 								<input type="text" class="form-control" id="password" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+                <p class="error-pass">Password must have 8 characters or more</p>
               </div>
               <div class="col-md-12 form-group">
 								<input type="text" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirm Password'">
+                <p class="error-pass-match">Passwords do not match</p>
 							</div>
 							<div class="col-md-12 form-group">
 								<div class="creat_account">
@@ -117,7 +120,7 @@
 								</div>
 							</div>
 							<div class="col-md-12 form-group">
-								<button type="submit" value="submit" class="button button-register w-100">Register</button>
+								<button type="button" value="register" class="button button-register w-100" id="button-register">Register</button>
 							</div>
 						</form>
 					</div>

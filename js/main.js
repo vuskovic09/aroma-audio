@@ -6,10 +6,17 @@ $(document).ready(function(){
   var itemNo = localStorage.getItem('cart');
   $('.cart-icon').html(itemNo);
 
+  $('#button-register').click(function(){
+    var eMail = $('#email').value;
+    console.log(eMail);
+
+    });
+
   $('.sort-element').click(function(){
     onSortProducts.call(this);
   });
 });
+
 
 // PRODUCTS
 function ajaxProducts(callbackSuccess){
@@ -38,6 +45,7 @@ function printTrending(products){
 
 function showProducts() {
   ajaxProducts(function(products){
+    sortProducts(products);
     printProducts(products);
   });
 }
@@ -157,23 +165,24 @@ function onSortProducts(){
 
     ajaxProducts(function(products){
         sortProducts(products, sortBy, order);
-        printProducts(products);
+        showProducts(products);
     });
 }
 
-
 function sortProducts(products, sortBy, order) {
     products.sort(function(a,b){
-        let valueA = (sortBy=='name')? a.price : a.name;
-        let valueB = (sortBy=='price')? b.price : b.name;
+        let valueA = (sortBy == 'name')? a.name : a.price;
+        let valueB = (sortBy ==  'price')? b.price : b.name;
         if(valueA > valueB)
-            return order=='asc' ? 1 : -1;
+            return order == 'asc' ? 1 : -1;
         else if(valueA < valueB)
             return order=='asc' ? -1 : 1;
         else
             return 0;
     });
 }
+
+
 
 
 // SHOPPING CART - ADD
@@ -239,20 +248,20 @@ function clearCart() {
 }
 
 // HELPER FUNCTIONS
-function inArray(array, element){
-  return array.indexOf(element)!==-1;
-}
-
 function getStorage(){
-  return JSON.parse(localStorage.getItem('sort'));
+    return JSON.parse(localStorage.getItem('sort'));
 }
 
 function setStorage(value){
-  return localStorage.setItem('sort', JSON.stringify(value));
+    return localStorage.setItem('sort', JSON.stringify(value));
 }
 
-function emptyStorage(){
-  return localStorage.getItem('sort') == null;
+function isEmptyStorage(){
+    return localStorage.getItem('sort') === null;
+}
+
+function inArray(array, element){
+    return array.indexOf(element)!==-1;
 }
 
 
